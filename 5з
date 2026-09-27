@@ -1,0 +1,17 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    double a = -2.0;
+    double b = 8.0;
+
+    double Sa = (a + b) / 2;
+    double Sr = sqrt(abs(a) * abs(b));
+
+    cout << "Sa = " << Sa << endl;
+    cout << "Sr = " << Sr << endl;
+
+    return 0;
+}
