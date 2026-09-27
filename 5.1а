@@ -1,0 +1,14 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    double x = 2.0;
+    double y = 5.0;
+
+    double max_val = (x > y) ? x : y;
+
+    cout << "max = " << max_val << endl;
+
+    return 0;
+}
