@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    double x = 2.0;
+
+    double x2 = x * x;
+    double x4 = x2 * x2;
+    
+    double res = 2 * x4 - 3 * x2 * x + 4 * x2 - 5 * x + 6;
+
+    cout << res << endl;
+
+    return 0;
+}
