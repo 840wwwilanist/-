@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Введите n: ";
+    cin >> n;
+
+    long long S = 0;
+    for (int i = 1; i <= n; i++) {
+        if (i % 3 == 0 && i % 2 != 0) {
+            S += (long long)i * i * i - 3LL * i * n * n;
+        }
+    }
+
+    cout << "Исходные данные: n = " << n << "\n";
+    cout << "Ожидаемый результат: S = " << S << "\n";
+}
