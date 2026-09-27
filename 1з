@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    double A = 2.5;
+    double B = 2.0;
+
+    double S = A + B;
+    double R = A - B;
+    double P = A * B;
+
+    cout << "Сумма = " << S << endl;
+    cout << "Разность = " << R << endl;
+    cout << "Произведение = " << P << endl;
+
+    return 0;
+}
