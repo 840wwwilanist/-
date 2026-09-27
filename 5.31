@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, r, s;
+    cout << "Введите a b r s: ";
+    cin >> a >> b >> r >> s;
+
+    int rem = a % b;
+    bool ok = (rem == r) || (rem == s);
+
+    cout << "Исходные данные: a = " << a << ", b = " << b
+         << ", r = " << r << ", s = " << s << "\n";
+
+    if (ok) {
+        cout << "Ожидаемый результат: верно, остаток равен " << rem << "\n";
+    } else {
+        cout << "Ожидаемый результат: не верно, остаток не равен "
+             << r << ", ни " << s << "\n";
+    }
+}
