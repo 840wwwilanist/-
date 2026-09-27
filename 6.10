@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double x0, xk, Dx;
+    cin >> x0 >> xk >> Dx;
+
+    cout << "Исходные данные: x0 = " << x0
+         << ", xk = " << xk
+         << ", Dx = " << Dx << "\n";
+
+    cout << "x\tf(x)\n";
+
+    for (double x = x0; x <= xk + 1e-9; x += Dx) {
+        double f;
+        if (x <= -1) {
+            f = -1;
+        }
+        else if (x < 1) {
+            f = -1.0 / (x * x);
+        }
+        else if (x < 2) {
+            f = x * x;
+        }
+        else {
+            f = 4;
+        }
+        cout << x << "\t" << f << "\n";
+    }
+}
