@@ -1,0 +1,15 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    double R = 13.7;
+    double phi = 3.14;
+
+    double S = (R * R * phi) / 2;
+
+    cout << "Sph = " << S << endl;
+
+    return 0;
+}
