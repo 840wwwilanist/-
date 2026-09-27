@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    double a{}, res{};
+    cin >> a;
+
+    if (a >= -2.0 && a < 2.0) {
+        res = a * a;
+    }
+    else {
+        res = 4;
+    }
+
+    cout << "Исходные данные: a = " << a << "\n";
+    cout << "Результат: " << res << "\n";
+}
