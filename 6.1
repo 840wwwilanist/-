@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double a0, ak, Da;
+    cin >> a0 >> ak >> Da;
+
+    cout << "Исходные данные: a0 = " << a0
+         << ", ak = " << ak
+         << ", Da = " << Da << "\n";
+
+    cout << "a\tV\tS\n";
+
+    for (double a = a0; a <= ak; a += Da) {
+        double V = a * a * a;
+        double S = 6 * a * a;
+        cout << a << "\t" << V << "\t" << S << "\n";
+    }
+}
