@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double eps;
+    cout << "Введите eps: ";
+    cin >> eps;
+
+    double sum = 0.0;
+    int i = 1;
+    double term;
+
+    do {
+        term = 1.0 / (i * i);
+        sum += term;
+        i++;
+    } while (term >= eps);
+
+    cout << "Исходные данные: eps = " << eps << "\n";
+    cout << "Ожидаемый результат: " << sum << "\n";
+}
