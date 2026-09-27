@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double x{}, y{}, z{};
+    cin >> x >> y >> z;
+
+    bool exists = (x + y > z) && (x + z > y) && (y + z > x);
+    bool is_acute = (x * x + y * y > z * z) && 
+                    (x * x + z * z > y * y) && 
+                    (y * y + z * z > x * x);
+
+    if (!exists) {
+        cout << "Треугольник не существует.\n";
+    } else {
+        cout << "Исходные данные: x = " << x 
+             << ", y = " << y << ", z = " << z << "\n";
+        if (is_acute) {
+            cout << "Ожидаемый результат: треугольник существует и он остроуголен.\n";
+        } else {
+            cout << "Ожидаемый результат: треугольник существует и он не остроуголен.\n";
+        }
+    }
+}
