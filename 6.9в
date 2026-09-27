@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double x0, xk, Dx;
+    cin >> x0 >> xk >> Dx;
+
+    cout << "Исходные данные: x0 = " << x0
+         << ", xk = " << xk
+         << ", Dx = " << Dx << "\n";
+
+    cout << "x\tf(x)\n";
+
+    for (double x = x0; x <= xk; x += Dx) {
+        double f;
+        if (x <= 0) {
+            f = 0;
+        }
+        else if (x <= 1) {
+            f = x;
+        }
+        else {
+            f = pow(x, 4);
+        }
+        cout << x << "\t" << f << "\n";
+    }
+}
