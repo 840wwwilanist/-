@@ -1,0 +1,16 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    double R1 = 4.0;
+    double R2 = 2.0;
+    double R3 = 4.0;
+
+    double R = 1 / (1/R1 + 1/R2 + 1/R3);
+
+    cout << "R = " << R << endl;
+
+    return 0;
+}
