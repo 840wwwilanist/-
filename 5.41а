@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int k, l, m, n;
+    cout << "Введите k l m n: ";
+    cin >> k >> l >> m >> n;
+
+    bool one_color = ((k + l) % 2) == ((m + n) % 2);
+
+    cout << "Исходные данные: k = " << k << ", l = " << l
+         << ", m = " << m << ", n = " << n << "\n";
+
+    if (one_color) {
+        cout << "Ожидаемый результат: поля одного цвета.\n";
+    } else {
+        cout << "Ожидаемый результат: поля разных цветов.\n";
+    }
+}
