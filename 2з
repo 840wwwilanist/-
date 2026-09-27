@@ -9,8 +9,6 @@ int main() {
 
     double z = (abs(x) - abs(y)) / (1 + abs(x * y));
 
-    cout << "x = " << x << ", y = " << y << endl;
-    cout << "z = (|x| - |y|) / (1 + |x * y|)" << endl;
     cout << "z = " << z << endl;
 
     return 0;
