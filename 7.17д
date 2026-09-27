@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int n;
+    double x;
+
+    cout << "Введите данные для n и x: ";
+    cin >> n >> x;
+
+    double P = 1.0;
+    for (int k = 1; k <= n; k++) {
+        P *= (double)k / (k + 1) - pow(cos(fabs(x)), k);
+    }
+
+    cout << "Исходные данные: n = " << n << ", x = " << x << "\n";
+    cout << "Ожидаемый результат: " << P << "\n";
+}
