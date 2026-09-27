@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    double V1 = 10.0;
+    double T1 = 90.0;
+    double V2 = 90.0;
+    double T2 = 10.0;
+
+    double V = V1 + V2;
+    double T = (V1 * T1 + V2 * T2) / V;
+
+    cout << "V = " << V << endl;
+    cout << "T = " << T << endl;
+
+    return 0;
+}
