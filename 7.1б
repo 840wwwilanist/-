@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Введите число: ";
+    cin >> n;
+
+    unsigned long long fact = 1;
+    for (int i = 2; i <= n; i++) {
+        fact *= i;
+    }
+
+    cout << "Исходные данные: n = " << n << "\n";
+    cout << "Ожидаемый результат: " << fact << "\n";
+}
