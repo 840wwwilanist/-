@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    double a{}, res{};
+    double a, res;
     cin >> a;
 
     if (a >= -2.0 && a < 2.0) {
@@ -13,6 +13,6 @@ int main() {
         res = 4;
     }
 
-    cout << "Исходные данные: a = " << a << "\n";
-    cout << "Результат: " << res << "\n";
+    println("Исходные данные: a = {} ", a)
+    print("Результат: {}", res)
 }
