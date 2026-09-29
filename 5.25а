@@ -4,6 +4,7 @@ using namespace std;
 
 int main() {
     double a, res;
+    println("Веедите число для переменной a:");
     cin >> a;
 
     if (a >= -2.0 && a < 2.0) {
