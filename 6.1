@@ -1,19 +1,18 @@
 #include <iostream>
+#include <print>
+
 using namespace std;
 
 int main() {
     double a0, ak, Da;
+    println("Введите начальное значение a0, конечное ak и шаг Da:");
     cin >> a0 >> ak >> Da;
 
-    cout << "Исходные данные: a0 = " << a0
-         << ", ak = " << ak
-         << ", Da = " << Da << "\n";
-
-    cout << "a\tV\tS\n";
+    println("a\tV\tS");
 
     for (double a = a0; a <= ak; a += Da) {
         double V = a * a * a;
         double S = 6 * a * a;
-        cout << a << "\t" << V << "\t" << S << "\n";
+        println("{}\t{}\t{}", a, V, S);
     }
 }
