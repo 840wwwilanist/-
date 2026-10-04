@@ -21,6 +21,5 @@ int main() {
         result = 5.0 - 2.0 * a;
     }
 
-    println("Исходные данные: a = {}", a);
     println("Результат: {}", result);
 }
