@@ -10,7 +10,7 @@ int main() {
 
     println("a\tV\tS");
 
-    for (double a = a0; a <= ak; a += Da) {
+    for (double a = a0; a <= ak; a = a + Da) {
         double V = a * a * a;
         double S = 6 * a * a;
         println("{}\t{}\t{}", a, V, S);
