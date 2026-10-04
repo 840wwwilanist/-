@@ -1,8 +1,11 @@
 #include <iostream>
+#include <print>
+
 using namespace std;
 
 int main() {
-    double a{}, result{};
+    double a, result;
+    println("Введите число a:");
     cin >> a;
 
     if (a <= 0.0) {
@@ -18,6 +21,6 @@ int main() {
         result = 5.0 - 2.0 * a;
     }
 
-    cout << "Исходные данные: a = " << a << "\n";
-    cout << "Результат: " << result << "\n";
+    println("Исходные данные: a = {}", a);
+    println("Результат: {}", result);
 }
