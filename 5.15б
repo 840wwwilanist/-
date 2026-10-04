@@ -1,24 +1,24 @@
 #include <iostream>
+#include <print>
+
 using namespace std;
 
 int main() {
-    double x{}, y{}, z{};
+    double x, y, z;
+    println("Введите три стороны треугольника (x y z):");
     cin >> x >> y >> z;
 
-    bool exists = (x + y > z) && (x + z > y) && (y + z > x);
-    bool is_acute = (x * x + y * y > z * z) && 
-                    (x * x + z * z > y * y) && 
-                    (y * y + z * z > x * x);
-
-    if (!exists) {
-        cout << "Треугольник не существует.\n";
+    if (!((x + y > z) && (x + z > y) && (y + z > x))) {
+        println("Треугольник не существует.");
     } else {
-        cout << "Исходные данные: x = " << x 
-             << ", y = " << y << ", z = " << z << "\n";
-        if (is_acute) {
-            cout << "Ожидаемый результат: треугольник существует и он остроуголен.\n";
+        println("Исходные данные: x = {}, y = {}, z = {}", x, y, z);
+
+        if ((x * x + y * y > z * z) &&
+            (x * x + z * z > y * y) &&
+            (y * y + z * z > x * x)) {
+            println("Треугольник существует и он остроуголен.");
         } else {
-            cout << "Ожидаемый результат: треугольник существует и он не остроуголен.\n";
+            println("Треугольник существует и он не остроуголен.");
         }
     }
 }
