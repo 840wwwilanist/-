@@ -1,4 +1,5 @@
 #include <iostream>
+#include <print>
 
 using namespace std;
 
@@ -12,8 +13,22 @@ int main() {
     }
     else {
         res = 4;
-    }
+    
+    println("Результат: {}", res)
+}
 
-    println("Исходные данные: a = {} ", a)
-    print("Результат: {}", res)
+
+#include <iostream>
+#include <print>
+
+using namespace std;
+
+int main() {
+    double a, bol;
+    println("Введите число для переменной a:");
+    cin >> a;
+
+    double bol = (a >= -2.0 && a < 2.0) ? a * a : 4.0;
+
+    println("Результат: {}", bol);
 }
