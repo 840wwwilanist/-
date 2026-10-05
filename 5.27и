@@ -8,9 +8,26 @@ int main() {
     println("Введите координаты точки (x y):");
     cin >> x >> y;
 
-    bool shtr = (y <= 2 * x + 3) &&
-                (y <= -x / 2 + 0.5) &&
-                (y >= (x - 1) / 3);
+    double Ax = 0.0,  Ay = 1.0;
+    double Bx = 1.0,  By = 0.0;
+    double Cx = -2.0, Cy = -1.0;
+
+    double kAB = (By - Ay) / (Bx - Ax);
+    double bAB = Ay - k_AB * Ax;
+
+    double kAC = (Cy - Ay) / (Cx - Ax);
+    double bAC = Ay - kAC * Ax;
+
+    double kBC = (Cy - By) / (Cx - Bx);
+    double bBC = By - kBC * Bx;
+
+    double lineAB = kAB * x + b_AB;
+    double lineAC = kAC * x + b_AC;
+    double lineBC = kBC * x + b_BC;
+
+    bool shtr = (y <= lineAB) && 
+                (y <= lineAC) && 
+                (y >= lineBC);
 
     if (shtr) {
         println("Точка принадлежит заштрихованной части плоскости.");
@@ -18,4 +35,6 @@ int main() {
     else {
         println("Точка не принадлежит заштрихованной части плоскости.");
     }
+    
+    return 0;
 }
