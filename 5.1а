@@ -3,8 +3,8 @@
 using namespace std;
 
 int main() {
-    double x = 2.0;
-    double y = 5.0;
+    double x, y;
+    cin >> x >> y;
 
     double max_val = (x > y) ? x : y;
 
