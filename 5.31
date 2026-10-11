@@ -9,8 +9,15 @@ int main() {
     cin >> a >> b >> r >> s;
 
     int ost = a % b;
-    bool ok = (rem == r) || (rem == s);
 
+    if (ost == 0) {
+        int quotient = a / b;
+        println("Число {} делится на {} нацело, частное = {}", a, b, quotient);
+        return 0;
+    }
+
+    bool ok = (ost == r) || (ost == s);
+    
     if (ok) {
         println("Ожидаемый результат: верно, остаток равен {}", ost);
     } else {
