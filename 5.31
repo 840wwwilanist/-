@@ -11,14 +11,14 @@ int main() {
     int ost = a % b;
 
     if (ost == 0) {
-        int quotient = a / b;
-        println("Число {} делится на {} нацело, частное = {}", a, b, quotient);
+        int chastnoe = a / b;
+        println("Число {} делится на {} нацело, частное = {}", a, b, chastnoe);
         return 0;
     }
 
-    bool ok = (ost == r) || (ost == s);
+    bool verno = (ost == r) || (ost == s);
     
-    if (ok) {
+    if (verno) {
         println("Ожидаемый результат: верно, остаток равен {}", ost);
     } else {
         println("Ожидаемый результат: не верно, остаток не равен {}, ни {}", r, s);
