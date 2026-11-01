@@ -1,19 +1,31 @@
 #include <iostream>
+#include <print>
 #include <cmath>
+
 using namespace std;
 
 int main() {
     int n;
     double x;
-
-    cout << "Введите данные для n и x: ";
+    
+    println("Введите натуральное число n и действительное число x:");
     cin >> n >> x;
 
-    double P = 1.0;
-    for (int k = 1; k <= n; k++) {
-        P *= (double)k / (k + 1) - pow(cos(fabs(x)), k);
+    if (n <= 0) {
+        println("введены некорректные данные.");
+        return 0;
     }
 
-    cout << "Исходные данные: n = " << n << ", x = " << x << "\n";
-    cout << "Ожидаемый результат: " << P << "\n";
+    double product = 1.0;
+
+    // k остается целым, но мы прибавляем 1.0, чтобы деление стало дробным
+    for (int k = 1; k <= n; k = k + 1) {
+        double fraction = k / (k + 1.0); 
+        double cos_val = pow(cos(fabs(x)), k);
+        product = product * (fraction - cos_val);
+    }
+
+    println("Результат: {}", product);
+
+    return 0;
 }
