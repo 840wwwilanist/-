@@ -1,16 +1,27 @@
 #include <iostream>
+#include <print>
+
 using namespace std;
 
 int main() {
     int n;
-    cout << "Введите число: ";
+    println("Введите натуральное число n:");
     cin >> n;
 
-    unsigned long long fact = 1;
-    for (int i = 2; i <= n; i++) {
-        fact *= i;
+    if (n <= 0) {
+        println("введены некорректные данные.");
+        return 0;
     }
 
-    cout << "Исходные данные: n = " << n << "\n";
-    cout << "Ожидаемый результат: " << fact << "\n";
+    // Переменная для результата (начинаем с 1)
+    long long fact = 1;
+
+    // Обычный цикл, где мы вручную прибавляем 1 к i
+    for (int i = 1; i <= n; i = i + 1) {
+        fact = fact * i;
+    }
+
+    println("Результат: {}", fact);
+
+    return 0;
 }
