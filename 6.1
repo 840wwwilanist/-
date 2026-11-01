@@ -8,11 +8,19 @@ int main() {
     println("Введите начальное значение a0, конечное ak и шаг Da:");
     cin >> a0 >> ak >> Da;
 
+    // Защита от зависания (если шаг <= 0 или начальное больше конечного)
+    if (Da <= 0 || a0 > ak) {
+        println("введены некорректные данные.");
+        return 0;
+    }
+
     println("a\tV\tS");
 
     for (double a = a0; a <= ak; a = a + Da) {
         double V = a * a * a;
-        double S = 6 * a * a;
+        double S = 4 * a * a; // Площадь боковой поверхности
         println("{}\t{}\t{}", a, V, S);
     }
+
+    return 0;
 }
