@@ -58,3 +58,43 @@ int main() {
 
     return 0;
 }
+
+
+
+
+
+
+
+#include <iostream>
+#include <print>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    double a0, ak, Da;
+    println("Введите начальное значение a0, конечное ak и шаг Da:");
+    cin >> a0 >> ak >> Da;
+
+    if (Da <= 0 || a0 > ak) {
+        println("введены некорректные данные.");
+        return 0;
+    }
+
+    // Шапка таблицы. Выравнивание по центру (^) в рамках 15 символов
+    println("{:^15} {:^15} {:^15}", "a", "V", "S");
+
+    int steps = round((ak - a0) / Da); 
+
+    for (int i = 0; i <= steps; i++) {
+        double a = a0 + i * Da;
+        
+        double V = a * a * a;
+        double S = 4 * a * a;
+
+        // Числа тоже выравниваем по центру (^), чтобы они были ровно под буквами
+        println("{:^15.2f} {:^15.2f} {:^15.2f}", a, V, S);
+    }
+
+    return 0;
+}
