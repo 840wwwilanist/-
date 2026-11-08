@@ -13,15 +13,42 @@ int main() {
         return 0;
     }
 
-    // Переменная для результата (начинаем с 1)
     long long fact = 1;
 
-    // Обычный цикл, где мы вручную прибавляем 1 к i
-    for (int i = 1; i <= n; i = i + 1) {
-        fact = fact * i;
+    for (int i = 1; i <= n; i++) {
+        fact *= i;
     }
 
     println("Результат: {}", fact);
+
+    return 0;
+}
+
+
+#include <iostream>
+#include <boost/multiprecision/cpp_int.hpp>
+
+using namespace std;
+using namespace boost::multiprecision;
+
+int main() {
+    int n;
+    
+    cout << "Введите натуральное число n: ";
+    cin >> n;
+
+    if (n <= 0) {
+        cout << "Введены некорректные данные.\n";
+        return 0;
+    }
+
+    cpp_int fact = 1;
+
+    for (int i = 1; i <= n; i++) {
+        fact *= i;
+    }
+
+    cout << "Результат: " << fact << "\n"; 
 
     return 0;
 }
