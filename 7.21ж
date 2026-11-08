@@ -1,1 +1,35 @@
 
+#include <iostream>
+#include <print>
+
+using namespace std;
+
+int main() {
+    int n;
+    println("Введите натуральное число n:");
+    cin >> n;
+
+    if (n <= 0) {
+        println("введены некорректные данные.");
+        return 0;
+    }
+
+    double S = 0.0;
+    double a;
+
+    println("Введите {} чисел через пробел:", n);
+
+    for (int i = 1; i <= n; i++) {
+        cin >> a;
+
+        if (i % 2 != 0) {
+            S += a;
+        } else {
+            S -= a;
+        }
+    }
+
+    println("Результат: {}", S);
+
+    return 0;
+}
