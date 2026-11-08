@@ -52,3 +52,41 @@ int main() {
 
     return 0;
 }
+
+
+
+#include <iostream>
+#include <print>
+#include <string>
+#include <boost/multiprecision/cpp_int.hpp>
+
+using namespace std;
+using namespace boost::multiprecision;
+
+template <>
+struct std::formatter<boost::multiprecision::cpp_int> : std::formatter<std::string> {
+    auto format(const boost::multiprecision::cpp_int& p, std::format_context& ctx) const {
+        return std::formatter<std::string>::format(p.str(), ctx);
+    }
+};
+
+int main() {
+    int n;
+    println("Введите натуральное число n:");
+    cin >> n;
+
+    if (n <= 0) {
+        println("введены некорректные данные.");
+        return 0;
+    }
+
+    cpp_int fact = 1;
+
+    for (int i = 1; i <= n; i++) {
+        fact *= i;
+    }
+
+    println("Результат: {}", fact);
+
+    return 0;
+}
