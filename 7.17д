@@ -16,16 +16,15 @@ int main() {
         return 0;
     }
 
-    double product = 1.0;
+    double res = 1.0;
 
-    // k остается целым, но мы прибавляем 1.0, чтобы деление стало дробным
-    for (int k = 1; k <= n; k = k + 1) {
-        double fraction = k / (k + 1.0); 
-        double cos_val = pow(cos(fabs(x)), k);
-        product = product * (fraction - cos_val);
+    for (int k = 1; k <= n; k++) {
+        double fraction = k / (k + 1.0);
+        double cospow = pow(cos(fabs(x)), k);
+        res *= (fraction - cospow);
     }
 
-    println("Результат: {}", product);
+    println("Результат: {}", res);
 
     return 0;
 }
