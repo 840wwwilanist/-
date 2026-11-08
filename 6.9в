@@ -14,7 +14,9 @@ int main() {
         return 0;
     }
 
-    println("{:^15}{:^15}", "x", "y");
+    println("+{:-^15}+{:-^15}+", "", "");
+    println("|{:^15}|{:^15}|", "x", "y");
+    println("+{:-^15}+{:-^15}+", "", "");
 
     for (double x = x0; x <= xk; x += Dx) {
         double y;
@@ -27,8 +29,10 @@ int main() {
             y = pow(x, 4); 
         }
 
-        println("{:^15.2f}{:^15.2f}", x, y);
+        println("|{:^15.2f}|{:^15.2f}|", x, y);
     }
+
+    println("+{:-^15}+{:-^15}+", "", "");
 
     return 0;
 }
