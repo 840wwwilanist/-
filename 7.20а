@@ -19,5 +19,9 @@ int main() {
     }
 
     println("Результат: {:.5f}", sum);
+   
     return 0;
 }
+
+
+111
