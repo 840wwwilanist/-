@@ -1,0 +1,22 @@
+#include <iostream>
+#include <print>
+
+using namespace std;
+
+int main() {
+    long long S = 0;
+
+    for (int k = 1; k <= 10; k++) {
+        long long sum_i = 0;
+
+        for (int i = 1; i <= 15; i++) {
+            sum_i += (k - i) * (k - i);
+        }
+
+        S += (k * k * k) * sum_i;
+    }
+
+    println("S = {}", S);
+
+    return 0;
+}
