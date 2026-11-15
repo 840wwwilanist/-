@@ -24,7 +24,7 @@ int main() {
     double b3 = yB - k3 * xB;
 
     double x, y;
-    print("Введите x и y: ");
+    println("Введите x и y: ");
     cin >> x >> y;
 
     // 3. Подставляем x в найденные прямые
