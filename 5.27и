@@ -4,37 +4,39 @@
 using namespace std;
 
 int main() {
+    // 1. Координаты вершин с графика
+    double xA = -1, yA = 1;
+    double xB = 1,  yB = 0;   
+    double xC = -2, yC = -1;
+
+    // 2. Нахождение прямых по формуле y = kx + b
+    // k = (y2 - y1) / (x2 - x1)
+    // CA:
+    double k1 = (yA - yC) / (xA - xC); 
+    double b1 = yA - k1 * xA;
+
+    // AB: 
+    double k2 = (yB - yA) / (xB - xA);
+    double b2 = yB - k2 * xB;
+
+    // СВ:
+    double k3 = (yB - yC) / (xB - xC);
+    double b3 = yB - k3 * xB;
+
     double x, y;
-    println("Введите координаты точки (x y):");
+    print("Введите x и y: ");
     cin >> x >> y;
 
-    double Ax = 0.0,  Ay = 1.0;
-    double Bx = 1.0,  By = 0.0;
-    double Cx = -2.0, Cy = -1.0;
+    // 3. Подставляем x в найденные прямые
+    bool cond1 = (y <= k1 * x + b1);
+    bool cond2 = (y <= k2 * x + b2);
+    bool cond3 = (y >= k3 * x + b3);
 
-    double kAB = (By - Ay) / (Bx - Ax);
-    double bAB = Ay - k_AB * Ax;
-
-    double kAC = (Cy - Ay) / (Cx - Ax);
-    double bAC = Ay - kAC * Ax;
-
-    double kBC = (Cy - By) / (Cx - Bx);
-    double bBC = By - kBC * Bx;
-
-    double lineAB = kAB * x + b_AB;
-    double lineAC = kAC * x + b_AC;
-    double lineBC = kBC * x + b_BC;
-
-    bool shtr = (y <= lineAB) && 
-                (y <= lineAC) && 
-                (y >= lineBC);
-
-    if (shtr) {
-        println("Точка принадлежит заштрихованной части плоскости.");
+    if (cond1 && cond2 && cond3) {
+        println("Принадлежит");
+    } else {
+        println("Не принадлежит");
     }
-    else {
-        println("Точка не принадлежит заштрихованной части плоскости.");
-    }
-    
+
     return 0;
 }
