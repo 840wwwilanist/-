@@ -1,0 +1,27 @@
+#include <iostream>
+#include <print>
+
+using namespace std;
+
+int main() {
+    int n;
+    print("Введите n: ");
+    cin >> n;
+
+    double S = 0.0;
+
+    for (int k = 1; k <= n; k++) {
+        int limit = k * k;
+        double term = 1.0;
+
+        for (int j = 2; j <= limit; j++) {
+            term /= j;
+        }
+
+        S += term;
+    }
+
+    println("{:.9f}", S);
+
+    return 0;
+}
