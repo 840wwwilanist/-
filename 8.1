@@ -1,18 +1,25 @@
 #include <iostream>
+#include <print>
+
 using namespace std;
 
 int main() {
-    int n;
-    cout << "Введите n: ";
+    long long n;
+    print("Введите n: ");
     cin >> n;
 
     long long S = 0;
-    for (int i = 1; i <= n; i++) {
-        if (i % 3 == 0 && i % 2 != 0) {
-            S += (long long)i * i * i - 3LL * i * n * n;
+
+    for (long long i = 1; i <= n; i++) {
+        
+        long long val = i * i * i - 3 * i * n * n;
+        
+        if (val % 3 == 0 && val % 2 != 0) {
+            S += val;
         }
     }
 
-    cout << "Исходные данные: n = " << n << "\n";
-    cout << "Ожидаемый результат: S = " << S << "\n";
+    println("S = {}", S);
+
+    return 0;
 }
