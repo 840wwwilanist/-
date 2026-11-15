@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <print>
 
@@ -6,22 +5,23 @@ using namespace std;
 
 int main() {
     int n;
-    println("Введите натуральное число n:");
+    print("Введите количество чисел n: ");
     cin >> n;
 
     if (n <= 0) {
-        println("введены некорректные данные.");
-        return 0;
+        println("Ошибка! Количество чисел n должно быть натуральным.");
+        return 1;
     }
 
     double S = 0.0;
-    double a;
 
-    println("Введите {} чисел через пробел:", n);
+    print("Введите {} чисел через пробел: ", n);
 
-    for (int i = 1; i <= n; i++) {
-        cin >> a;
-
+    for (int i = 1; i <= n; ++i) {
+        double a; 
+        cin >> a; 
+        
+        // Если i нечётное — прибавляем, если чётное — вычитаем
         if (i % 2 != 0) {
             S += a;
         } else {
@@ -29,7 +29,7 @@ int main() {
         }
     }
 
-    println("Результат: {}", S);
+    println("S = {}", S);
 
     return 0;
 }
